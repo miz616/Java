@@ -1,0 +1,38 @@
+import comment.Zenhan;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    Zenhan.doWarusa(); // 前半
+    Zenhan.doTogame(); // 前半
+    comment.Kouhan.callDeae(); // 後半
+    comment.Kouhan.showMondokoro(); // 後半
+  }
+}
+
+
+//前半
+package comment;
+
+public class Zenhan {
+  public static void doWarusa() {
+    System.out.println("きなこでござる。食えませんがの。");
+  }
+  public static void doTogame() {
+    System.out.println("この老いぼれの目はごまかせませんぞ。");
+  }
+}
+
+
+//後半
+package comment;
+
+public class Kouhan {
+  public static void callDeae() {
+    System.out.println("えぇい、こしゃくな。くせ者だ！であえい！");
+  }
+  public static void showMondokoro() throws Exception {
+    System.out.println("飛車さん、角さん。もういいでしょう。");
+    System.out.println("この紋所が目にはいらぬか！");
+    Zenhan.doTogame();    // もう一度、とがめる
+  }
+}
