@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Cleric {
+  String name;
+  int hp = 50;
+  final int MAX_HP = 50;
+  int mp = 10;
+  final int MAX_MP = 10;
+
+  public void selfAid() {
+    this.hp = this.MAX_HP;
+    this.mp -= 5;
+  }
+
+  public int pray(int sec) {
+
+    // 回復量をランダムで決める
+    int recover = new Random().nextInt(1) + sec;
+
+    // 回復量を計算する
+    int recoverActual = Math.min(this.MAX_MP - this.mp, recover);
+
+    this.mp += recoverActual;
+    return recoverActual;
+  }
+}
