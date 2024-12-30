@@ -1,0 +1,34 @@
+//TangibleAsset.java
+public abstract class TangibleAsset {
+  String name;
+  int price;
+  String color;
+  public TangibleAsset(String name, int price, String color) {
+    this.name = name;
+    this.price = price;
+    this.color = color;
+  }
+  public String getName() { return this.name; }
+  public int getPrice() { return this.price; }
+  public String getColor() { return this.color; }
+}
+
+//Computer.java
+public class Computer extends TangibleAsset {
+  String makerName;
+  public Computer(String name, int price, String color, String makerName) {
+    super(name, price, color);
+    this.makerName = makerName;
+  }
+  public String getMakerName() { return this.makerName; }
+}
+
+//book.java
+public class Book extends TangibleAsset {
+  String isbn;
+  public Book(String name, int price, String color, String isbn) {
+    super(name, price, color);
+    this.isbn = isbn;
+  }
+  public String getIsbn() { return this.isbn; }
+}
